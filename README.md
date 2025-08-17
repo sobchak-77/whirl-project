@@ -1,2 +1,5 @@
-# whirl-project
-Task manager page
+# Whirl
+The project of 'verstaem.online' community.
+
+## Stack
+HTML, CSS, JS
