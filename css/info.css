@@ -1,0 +1,39 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.info {
+  padding-top: 118px;
+  padding-bottom: 137px;
+}
+
+.info__title {
+  margin-bottom: 22px;
+}
+
+.info__descr {
+  margin-bottom: 65px;
+  max-width: 650px;
+  color: var(--txt-color);
+}
+
+/* ------------------ */
+/* --- CARD LIST --- */
+/* ---------------- */
+
+.info__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 65px 1fr 65px 1fr 65px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 65px;
+  width: 100%;
+}
+
+.info__card .simple-card__icon {
+  min-height: 56px;
+  margin-bottom: 5px;
+}

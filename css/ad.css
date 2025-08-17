@@ -1,0 +1,113 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.advert {
+  padding-top: 80px;
+  padding-bottom: 94px;
+  background-color: var(--main-color);
+}
+
+.advert__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  container: advert-container / inline-size;
+}
+
+/* ------------------------- */
+/* --- BACKGROUND IMAGE --- */
+/* ----------------------- */
+
+.advert__bg {
+  width: 100%;
+  min-height: 374px;
+  background-image: url("../img/ad.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left 60px bottom 3px;
+}
+
+@container advert-container (width < 1000px) {
+  .advert__bg {
+    min-height: 332px;
+    background-size: 290px;
+    background-position: left 30px bottom;
+  }
+}
+
+@container advert-container (width < 805px) {
+  .advert__bg {
+    background-position: left bottom;
+  }
+}
+
+@container advert-container (width < 745px) {
+  .advert__bg {
+    display: none;
+  }
+}
+
+/* ------------------------ */
+/* --- SECTION CONTENT --- */
+/* ---------------------- */
+
+.advert__content {
+  max-width: 500px;
+  color: var(--white-color);
+}
+
+.advert__title {
+  margin-bottom: 21px;
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+.advert__descr {
+  margin-bottom: 18px;
+}
+
+.advert__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 11px;
+  margin-bottom: 30px;
+}
+
+.advert__item-txt {
+  font-size: 17px;
+  line-height: 127%;
+}
+
+.advert__item-txt::before {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 13px;
+  background-image: url("../img/arrow_ad_list.svg");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.advert__btn {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.advert__btn:active {
+  -webkit-box-shadow: 0 0 0 2px rgb(158 161 163 / 50%);
+          box-shadow: 0 0 0 2px rgb(158 161 163 / 50%);
+}

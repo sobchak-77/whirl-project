@@ -1,0 +1,52 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.offer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.offer__wrap {
+  padding: 64px;
+  background-color: var(--light-color);
+}
+
+.offer__title {
+  margin-bottom: 20px;
+}
+
+.offer__descr {
+  max-width: 480px;
+  margin-bottom: 33px;
+}
+
+.offer__btn {
+  margin-bottom: 20px;
+  padding: 9px 36px;
+  letter-spacing: 0.05em;
+}
+
+/* --- offer remarks --- */
+
+.offer__remark-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+}
+
+.offer__remark {
+  padding-left: 20px;
+  color: var(--light-txt-color);
+  font-size: 13px;
+  line-height: 162%;
+  letter-spacing: 0.02em;
+  background-image: url("../img/arrow_offer.svg");
+  background-size: 15px 10px;
+  background-position: left 3px bottom 6px;
+  background-repeat: no-repeat;
+}

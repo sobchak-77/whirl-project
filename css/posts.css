@@ -1,0 +1,135 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.posts {
+  padding-top: 80px;
+  padding-bottom: 83px;
+  background-color: var(--section-back-color);
+}
+
+.posts__top-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+/* -------------------------- */
+/* --- LIST OF THE POSTS --- */
+/* ------------------------ */
+
+.posts__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.card__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 100%;
+  padding: 24px;
+  background-color: var(--white-color);
+  color: var(--txt-color);
+  font-weight: 400;
+}
+
+.card__label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 3px 19px;
+  color: #2c90c9;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background-color: var(--light-color);
+}
+
+.card__title {
+  margin-bottom: 13px;
+  font-family: var(--title-font-family);
+  font-size: 25px;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.card__link {
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.card__link:focus-visible {
+  border-color: var(--main-color);
+}
+
+@media (any-hover: hover) {
+  .card__title:hover {
+    color: var(--main-color);
+  }
+}
+
+.card__title:active {
+  color: #2c90c9;
+}
+
+.card__descr {
+  margin-bottom: 13px;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+}
+
+.card__time {
+  font-size: 12px;
+  line-height: 163%;
+  letter-spacing: 0.02em;
+}

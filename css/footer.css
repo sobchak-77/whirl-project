@@ -1,0 +1,308 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 30px;
+}
+
+.footer__container:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.footer__container:last-child {
+  position: relative;
+}
+
+.footer__container:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: inline-block;
+  width: calc(100% - (15px * 2));
+  height: 1px;
+  background-color: #dee5eb;
+}
+
+/* ---------------------------- */
+/* --- MAIN PART OF FOOTER --- */
+/* -------------------------- */
+
+.footer__wrap-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.footer__logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  gap: 19px;
+}
+
+/* --- logo --- */
+
+.footer__logo .logo__img {
+  width: 135px;
+  height: 47px;
+}
+
+/* --- credits --- */
+
+.f-credits {
+  display: inline-block;
+  color: var(--txt-color);
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+}
+
+.f-credits__link {
+  display: inline-block;
+  color: var(--main-color);
+  font-size: 13px;
+  line-height: 151%;
+  letter-spacing: 0.01em;
+  border-bottom: 2px solid transparent;
+  border-radius: 2px;
+  -webkit-transition: border-color 0.3s ease-in-out,
+    color 0.3s;
+  -o-transition: border-color 0.3s ease-in-out,
+    color 0.3s;
+  transition: border-color 0.3s ease-in-out,
+    color 0.3s;
+}
+
+.f-credits__link:focus-visible {
+  border-color: var(--main-color);
+}
+
+@media (any-hover: hover) {
+  .f-credits__link:hover {
+    color: var(--txt-color);
+  }
+}
+
+/* --- menu and subscribe */
+
+.footer__menu-sub-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.f-menu,
+.f-sub {
+  max-width: 216px;
+}
+
+.f-menu__title,
+.f-sub__title {
+  margin-bottom: 16px;
+  color: var(--txt-color);
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+}
+
+.f-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.f-menu__link {
+  color: var( --light-txt-color);
+  font-size: 13px;
+  line-height: 154%;
+  letter-spacing: 0.02em;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  border-radius: 2px;
+  -webkit-transition: outline-color 0.3s,
+    color 0.3s;
+  -o-transition: outline-color 0.3s,
+    color 0.3s;
+  transition: outline-color 0.3s,
+    color 0.3s;
+}
+
+.f-menu__link:focus-visible {
+  outline-color: var(--main-color);
+}
+
+@media (any-hover: hover) {
+  .f-menu__link:hover {
+    color: var(--light-main-color);
+  }
+}
+
+.f-menu__link:active {
+  color: var(--main-color);
+}
+
+.f-sub__descr {
+  margin-bottom: 30px;
+  color: var(--txt-color);
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+
+/* --- subscribe form --- */
+
+.sub-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 216px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sub-form__input {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 12px;
+  font-size: 13px;
+  line-height: 154%;
+  letter-spacing: 0.02em;
+}
+
+.sub-form__input::-webkit-input-placeholder {
+  color: var(--light-txt-color);
+}
+
+.sub-form__input::-moz-placeholder {
+  color: var(--light-txt-color);
+}
+
+.sub-form__input:-ms-input-placeholder {
+  color: var(--light-txt-color);
+}
+
+.sub-form__input::-ms-input-placeholder {
+  color: var(--light-txt-color);
+}
+
+.sub-form__input::placeholder {
+  color: var(--light-txt-color);
+}
+
+.sub-form__input::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 1px;
+  color: var(--border-color);
+}
+
+.sub-form__btn-icon {
+  width: 17px;
+  height: 10px;
+  stroke: var(--arrow-icon-color);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: stroke 0.3s;
+  -o-transition: stroke 0.3s;
+  transition: stroke 0.3s;
+}
+
+.is-active-icon {
+  stroke: var(--main-color);
+}
+
+/* ------------------------------ */
+/* --- BOTTOM PART OF FOOTER --- */
+/* ---------------------------- */
+
+.footer__wrap-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 34px;
+}
+
+/* --- social links --- */
+
+.footer__social-wrap {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.social__link {
+  display: inline-block;
+  font-size: 0;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  border-radius: 2px;
+  -webkit-transition: outline-color 0.3s, color 0.3s;
+  -o-transition: outline-color 0.3s, color 0.3s;
+  transition: outline-color 0.3s, color 0.3s;
+}
+
+.social__link-icon {
+  width: 22px;
+  height: 22px;
+  fill: var(--txt-color);
+  -webkit-transition: fill 0.3s;
+  -o-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.social__link:focus-visible {
+  outline-color: var(--main-color);
+}
+
+@media (any-hover: hover) {
+  .social__link:hover .social__link-icon {
+    fill: var(--main-color);
+  }
+}
+
+.social__link:active .social__link-icon {
+  fill: var(--light-main-color);
+}

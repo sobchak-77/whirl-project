@@ -1,0 +1,132 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.hero {
+  padding-bottom: 90px;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  container: hero-container / inline-size;
+}
+
+.hero__content {
+  max-width: 500px;
+  padding-top: 117px;
+}
+
+.hero__title {
+  margin-bottom: 25px;
+  color: var(--txt-color);
+  font-family: var(--title-font-family);
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 1px;
+}
+
+.hero__descr {
+  margin-bottom: 30px;
+  max-width: 350px;
+  color: var(--txt-color);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+
+/* --------------------- */
+/* --- HERO BUTTONS --- */
+/* ------------------- */
+
+.hero__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 27px;
+}
+
+.hero__btn.btn-book {
+  padding: 7px 34px;
+  letter-spacing: 0.06em;
+}
+
+.btn-more {
+  position: relative;
+  color: var(--main-color);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 159%;
+  letter-spacing: 0.01em;
+}
+
+.btn-more::after {
+  content: url("../img/arrow_icon_btn.svg");
+  position: absolute;
+  right: -21px;
+  top: 3px;
+  -webkit-transition: right 0.34s;
+  -o-transition: right 0.34s;
+  transition: right 0.34s;
+}
+
+.btn-more:focus-visible::after {
+  right: -26px;
+}
+
+@media (any-hover: hover) {
+  .btn-more:hover::after {
+    right: -26px;
+  }
+}
+
+/* ------------------------- */
+/* --- BACKGROUND IMAGE --- */
+/* ----------------------- */
+
+.hero__bg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-width: 452px;
+  min-height: 488px;
+  background-image: url("../img/hero.png");
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+@container hero-container (width < 852px) {
+  .hero__bg {
+    max-width: 340px;
+    min-height: 400px;
+    background-position: right top 80px;
+  }
+}
+
+@container hero-container (width < 715px) {
+  .hero__bg {
+    max-width: 275px;
+    min-height: 390px;
+    background-position: right bottom 40px;
+  }
+}
+
+@container hero-container (width < 648px) {
+  .hero__bg {
+    display: none;
+  }
+}

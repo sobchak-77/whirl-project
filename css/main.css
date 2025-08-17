@@ -1,0 +1,135 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --content-width: 1130px;
+  --container-width: calc(var(--content-width) + (15px * 2));
+  /* --- colors --- */
+  --main-color: #0070a0;
+  --light-main-color: #2c90c9;
+  --txt-color: #1f1f1f;
+  --light-txt-color: #626a72;
+  --white-color: #fff;
+  --light-color: #e6f7ff;
+  --section-back-color: #f7f9fa;
+  --border-color: #c2cdd8;
+  --arrow-icon-color: #cecac4;
+  /* --- fonts --- */
+  --font-family: "Inter", sans-serif;
+  --title-font-family: "Fraunces", sans-serif;
+}
+
+.page {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  color: var(--txt-color);
+  font-size: 16px;
+  font-family: var(--font-family);
+  background-color: var(--white-color);
+}
+
+.page__wrap {
+  overflow: hidden;
+}
+
+/* --------------------- */
+/* --- RESET STYLES --- */
+/* ------------------- */
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.input-reset {
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+/* ----------------------- */
+/* --- SERVICE STYLES --- */
+/* --------------------- */
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}

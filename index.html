@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whirl - task manager</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- fonts -->
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fraunces-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- styles -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/animate.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reuse.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/partners.css">
+  <link rel="stylesheet" href="css/benefits.css">
+  <link rel="stylesheet" href="css/process.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/ad.css">
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="stylesheet" href="css/posts.css">
+  <link rel="stylesheet" href="css/offer.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="page">
+  <!-- arrow svg icon -->
+  <svg style="display: none;" width="0" height="0">
+    <symbol id="arrow" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 10">
+      <g clip-path="url(#clip0_2_908)">
+        <path d="M1.71429 1.66663L9.00001 8.74996L16.2857 1.66663" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_2_908">
+          <rect width="18" height="10" />
+        </clipPath>
+      </defs>
+    </symbol>
+  </svg>
+  <!-- twitter svg icon -->
+  <svg style="display: none;" width="0" height="0">
+    <symbol id="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+      <g clip-path="url(#clip0_2_1665)">
+        <path d="M21.7231 2.91331C20.9233 3.34219 20.0751 3.62361 19.2063 3.74804C20.1213 3.08537 20.806 2.04254 21.1329 0.813959C20.2728 1.43199 19.3317 1.86719 18.3504 2.1007C17.9403 1.5713 17.4449 1.14948 16.8946 0.861369C16.3444 0.57325 15.7512 0.424995 15.1517 0.425784C12.7317 0.425784 10.7695 2.80049 10.7695 5.73056C10.7695 6.14593 10.8084 6.55125 10.8833 6.93978C7.24112 6.7185 4.01224 4.60639 1.85081 1.39655C1.46109 2.20616 1.25631 3.12669 1.25747 4.06368C1.2569 4.9371 1.43455 5.79717 1.77465 6.5674C2.11475 7.33775 2.60677 7.99433 3.20698 8.47902C2.51119 8.45228 1.83075 8.22475 1.22224 7.81555C1.22169 7.83767 1.22169 7.85944 1.22169 7.88236C1.22169 10.4517 2.73208 12.5958 4.73649 13.0837C4.09109 13.2952 3.41438 13.3262 2.7576 13.1744C3.31516 15.2814 4.93346 16.8157 6.85105 16.8587C5.29876 18.3333 3.38187 19.1332 1.40865 19.1296C1.05497 19.1296 0.706294 19.1048 0.363159 19.0554C2.36685 20.6138 4.69886 21.4411 7.08047 21.4382C15.1409 21.4382 19.5487 13.3553 19.5487 6.34607C19.5487 6.11646 19.5442 5.88702 19.5359 5.65905C20.3942 4.90887 21.135 3.97901 21.7231 2.91331Z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_2_1665">
+          <rect width="22" height="22" />
+        </clipPath>
+      </defs>
+    </symbol>
+  </svg>
+  <!-- linkedIn svg icon -->
+  <svg style="display: none;" width="0" height="0">
+    <symbol id="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+      <g clip-path="url(#clip0_2_1669)">
+        <path
+          d="M20.3715 0H1.62422C0.72617 0 0 0.708987 0 1.58555V20.4101C0 21.2867 0.72617 22 1.62422 22H20.3715C21.2695 22 22 21.2867 22 20.4144V1.58555C22 0.708987 21.2695 0 20.3715 0ZM6.52694 18.7473H3.26133V8.24569H6.52694V18.7473ZM4.89413 6.81487C3.8457 6.81487 2.99922 5.96837 2.99922 4.9242C2.99922 3.88008 3.8457 3.03359 4.89413 3.03359C5.9383 3.03359 6.78475 3.88008 6.78475 4.9242C6.78475 5.96406 5.9383 6.81487 4.89413 6.81487ZM18.7473 18.7473H15.4859V13.6426C15.4859 12.4266 15.4644 10.8582 13.7887 10.8582C12.0914 10.8582 11.8336 12.1859 11.8336 13.5566V18.7473H8.57656V8.24569H11.7047V9.68087H11.7476C12.1816 8.85587 13.2473 7.98362 14.8328 7.98362C18.1371 7.98362 18.7473 10.1578 18.7473 12.9852V18.7473Z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_2_1669">
+          <rect width="22" height="22" />
+        </clipPath>
+      </defs>
+    </symbol>
+  </svg>
+  <!-- facebook svg icon -->
+  <svg style="display: none;" width="0" height="0">
+    <symbol id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+      <g clip-path="url(#clip0_2_1673)">
+        <path
+          d="M22 11C22 4.92488 17.0751 0 11 0C4.92488 0 0 4.92488 0 11C0 16.4903 4.02252 21.0412 9.28125 21.8664V14.1797H6.48826V11H9.28125V8.57656C9.28125 5.81969 10.9235 4.29688 13.4361 4.29688C14.6393 4.29688 15.8984 4.51172 15.8984 4.51172V7.21875H14.5114C13.145 7.21875 12.7188 8.06676 12.7188 8.9375V11H15.7695L15.2818 14.1797H12.7188V21.8664C17.9775 21.0412 22 16.4903 22 11Z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_2_1673">
+          <rect width="22" height="22" />
+        </clipPath>
+      </defs>
+    </symbol>
+  </svg>
+
+  <div class="page__wrap">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__left-side">
+          <!-- main logo -->
+          <a class="header__logo logo wow fadeInDown" href="#" data-wow-duration="0.8s" data-wow-delay="0.6s">
+            <img class="logo__img img-style" src="img/logo.svg" alt="Whirl logo.">
+          </a>
+          <!-- page menu -->
+          <nav class="header__nav h-menu">
+            <ul class="h-menu__list list-reset">
+              <li class="h-menu__item wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                <a class="h-menu__link link-reset" href="#">
+                  Features
+                </a>
+              </li>
+              <li class="h-menu__item wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                <a class="h-menu__link link-reset" href="#">
+                  Pricing
+                </a>
+              </li>
+              <li class="h-menu__item wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                <a class="h-menu__link link-reset" href="#">
+                  Integrations
+                </a>
+              </li>
+              <li class="h-menu__item wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                <a class="h-menu__link link-reset" href="#">
+                  Learn
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__right-side">
+          <!-- header buttons -->
+          <div class="header__btn-wrap">
+            <a class="header__btn btn-primary btn-login link-reset wow fadeIn" href="#" data-wow-duration="1.3s" data-wow-delay="1s">
+              Sign in
+            </a>
+            <a class="header__btn btn-book link-reset wow fadeIn" href="#" data-wow-duration="1.3s" data-wow-delay="1.1s">
+              <span class="btn-book__txt">Book a demo</span>
+            </a>
+          </div>
+          <!-- burger -->
+          <button class="header__burger burger btn-reset wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.6s" aria-expanded="false" aria-label="Open menu">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+        <!-- tablet and mobile menu -->
+        <div class="header__mobile-menu mobile-menu">
+          <div class="mobile-menu__wrap">
+            <!-- page menu -->
+            <nav class="mobile-menu__nav h-menu">
+              <ul class="h-menu__list list-reset">
+                <li class="h-menu__item">
+                  <a class="h-menu__link link-reset" href="#">
+                    Features
+                  </a>
+                </li>
+                <li class="h-menu__item">
+                  <a class="h-menu__link link-reset" href="#">
+                    Pricing
+                  </a>
+                </li>
+                <li class="h-menu__item">
+                  <a class="h-menu__link link-reset" href="#">
+                    Integrations
+                  </a>
+                </li>
+                <li class="h-menu__item">
+                  <a class="h-menu__link link-reset" href="#">
+                    Learn
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- header buttons -->
+            <div class="mobile-menu__btn-wrap">
+              <a class="mobile-menu__btn btn-primary btn-login link-reset" href="#">
+                Sign in
+              </a>
+              <a class="mobile-menu__btn btn-book link-reset" href="#">
+                <span class="btn-book__txt">Book a demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <!-- page title -->
+            <h1 class="hero__title wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">
+              Your everyday tasks, automated.
+            </h1>
+            <!-- page description -->
+            <p class="hero__descr wow fadeIn" data-wow-duration="1.8s" data-wow-delay="0.9s">
+              Whirl lets you design and streamline your everyday tasks and workflows in&nbsp;just a&nbsp;few clicks.
+            </p>
+            <!-- hero buttons -->
+            <div class="hero__btn-wrap">
+              <a class="hero__btn btn-book link-reset wow fadeIn" href="#" data-wow-duration="1.8s" data-wow-delay="1s">
+                <span class="btn-book__txt">Book a demo</span>
+              </a>
+              <a class="hero__btn btn-more link-reset wow fadeIn" href="#" data-wow-duration="1.8s" data-wow-delay="1.1s">
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div class="hero__bg wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.8s"></div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="partners__container container">
+          <div class="partners__content">
+            <!-- hidden section title -->
+            <h2 class="partners__title visually-hidden">
+              Companies that trust us
+            </h2>
+            <!-- section description -->
+            <p class="partners__descr wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+              Trusted by&nbsp;50,000+ companies
+            </p>
+            <!-- list of icons -->
+            <ul class="partners__list list-reset">
+              <li class="partners__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                <img class="partners__img img-style" src="img/partners_focus_fox.svg" width="124" height="33" loading="lazy" alt="Focus Fox company logo.">
+              </li>
+              <li class="partners__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                <img class="partners__img img-style" src="img/partners_now_in_tech.svg" width="159" height="27" loading="lazy" alt="Now In Tech company logo.">
+              </li>
+              <li class="partners__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                <img class="partners__img img-style" src="img/partners_optimer.svg" width="148" height="33" loading="lazy" alt="Optimer company logo.">
+              </li>
+              <li class="partners__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                <img class="partners__img img-style" src="img/partners_carded.svg" width="117" height="34" loading="lazy" alt="Carded company logo.">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="benefits__container container">
+          <!-- hidden section title -->
+          <h2 class="benefits__title visually-hidden">
+            Our benefits
+          </h2>
+          <!-- benefits list -->
+          <ul class="benefits__list list-reset">
+            <li class="benefits__item">
+              <!-- card #1 -->
+              <div class="benefits__card benefits__card--1 simple-card wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.6s" src="img/benefits_fast.svg" loading="lazy" alt="Lightning.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                  Fast. Really fast.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip
+                  ex&nbsp;ea&nbsp;commodo consequat.
+                </p>
+              </div>
+            </li>
+            <li class="benefits__item">
+              <!-- card #2 -->
+              <div class="benefits__card benefits__card--2 simple-card wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s" src="img/benefits_buck.svg" loading="lazy" alt="Dollar.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="1s">
+                  More bang for buck.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1s">
+                  Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip
+                  ex&nbsp;ea&nbsp;commodo consequat.
+                </p>
+              </div>
+            </li>
+            <li class="benefits__item">
+              <!-- card #3 -->
+              <div class="benefits__card benefits__card--3 simple-card wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1s" src="img/benefits_safe.svg" loading="lazy" alt="OK gesture.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.1s">
+                  Safe and secure.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.2s">
+                  Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip
+                  ex&nbsp;ea&nbsp;commodo consequat.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="process">
+        <div class="process__container container">
+          <!-- hidden section title -->
+          <h2 class="process__title visually-hidden">
+            Our process
+          </h2>
+          <!-- section description -->
+          <div class="process__descr">
+            <p class="process__txt section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+              We&nbsp;will take care of&nbsp;everything,
+            </p>
+            <p class="process__txt process__txt--small wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+              so&nbsp;you can get back to&nbsp;relaxing.
+            </p>
+          </div>
+          <!-- accordion -->
+          <div class="process__accordion accordion">
+            <!-- accordion panel #1 -->
+            <div class="accordion__item accordion__item--icon-1 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.5s">
+              <button class="accordion__btn is-active btn-reset">
+                <span class="accordion__btn-title">
+                  Anti-loss technology
+                </span>
+                <svg class="accordion__btn-icon" viewBox="0 0 18 10">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore
+                  et&nbsp;dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <!-- accordion panel #2 -->
+            <div class="accordion__item accordion__item--icon-2 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.6s">
+              <button class="accordion__btn btn-reset">
+                <span class="accordion__btn-title">
+                  Exchange easily
+                </span>
+                <svg class="accordion__btn-icon" viewBox="0 0 18 10">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore
+                  et&nbsp;dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <!-- accordion panel #3 -->
+            <div class="accordion__item accordion__item--icon-3 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.7s">
+              <button class="accordion__btn btn-reset">
+                <span class="accordion__btn-title">
+                  Fully encrypted
+                </span>
+                <svg class="accordion__btn-icon" viewBox="0 0 18 10">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore
+                  et&nbsp;dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <!-- accordion panel #4 -->
+            <div class="accordion__item accordion__item--icon-4 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.8s">
+              <button class="accordion__btn btn-reset">
+                <span class="accordion__btn-title">
+                  Plenty of&nbsp;options
+                </span>
+                <svg class="accordion__btn-icon" viewBox="0 0 18 10">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore
+                  et&nbsp;dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="process__bg wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.8s"></div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container container">
+          <!-- section title -->
+          <div class="about__title-wrap">
+            <h2 class="about__title section-title wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+              What&rsquo;s Whirl
+              <span class="about__title-small">
+                all about?
+              </span>
+            </h2>
+          </div>
+          <!-- about us list -->
+          <ul class="about__list list-reset">
+            <li class="about__item">
+              <!-- card #1 -->
+              <div class="about__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.6s" src="img/about_icon_screen.svg" loading="lazy" alt="Financial indicator monitor.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                  All on&nbsp;one place.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip
+                  ex&nbsp;ea&nbsp;commodo consequat.
+                </p>
+              </div>
+            </li>
+            <li class="about__item">
+              <!-- card #2 -->
+              <div class="about__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s" src="img/about_icon_loupe.svg" loading="lazy" alt="Loupe.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                  Get daily alerts.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1s">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore.
+                </p>
+              </div>
+            </li>
+            <li class="about__item">
+              <!-- card #3 -->
+              <div class="about__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1s" src="img/about_icon_screen.svg" loading="lazy" alt="Financial indicator monitor.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.1s">
+                  Safe and secure.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.2s">
+                  Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip
+                  ex&nbsp;ea&nbsp;commodo consequat.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="advert">
+        <div class="advert__container container">
+          <div class="advert__bg wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s"></div>
+          <div class="advert__content">
+            <!-- section title -->
+            <h2 class="advert__title section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              Set, forget, and then track.
+            </h2>
+            <!-- section description -->
+            <p class="advert__descr section-descr wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+              ut&nbsp;labore et&nbsp;dolore magna aliqua.
+            </p>
+            <!-- section list -->
+            <ul class="advert__list list-reset">
+              <li class="advert__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                <p class="advert__item-txt">
+                  Understand your options
+                </p>
+              </li>
+              <li class="advert__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                <p class="advert__item-txt">
+                  No&nbsp;lock-ins
+                </p>
+              </li>
+              <li class="advert__item wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="1s">
+                <p class="advert__item-txt">
+                  You own the shares
+                </p>
+              </li>
+            </ul>
+            <!-- section button -->
+            <a class="advert__btn btn-book link-reset wow fadeInUp" href="#" data-wow-duration="0.8s" data-wow-delay="1.8s">
+              <span class="btn-book__txt">Book a Demo</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="info">
+        <div class="info__container container">
+          <!-- section title -->
+          <h2 class="info__title section-title wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.6s">
+            Your tasks, automated.
+          </h2>
+          <!-- section description -->
+          <p class="info__descr section-descr wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.7s">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+            ut&nbsp;labore et&nbsp;dolore magna aliqua.
+          </p>
+          <!-- card list -->
+          <ul class="info__list list-reset">
+            <li class="info__item">
+              <!-- card #1 -->
+              <div class="info__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" src="img/info_icon_1.svg" data-wow-duration="0.8s" data-wow-delay="0.6s" loading="lazy" alt="Science stuff.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.7s" >
+                  Learn your options.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor.
+                </p>
+              </div>
+            </li>
+            <li class="info__item">
+              <!-- card #2 -->
+              <div class="info__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" src="img/info_icon_2.svg" data-wow-duration="0.8s" data-wow-delay="0.8s" loading="lazy" alt="Lightning.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                  Stay informed.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1s">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt
+                  ut&nbsp;labore et&nbsp;doloretro.
+                </p>
+              </div>
+            </li>
+            <li class="info__item">
+              <!-- card #3 -->
+              <div class="info__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" src="img/info_icon_3.svg" data-wow-duration="0.8s" data-wow-delay="1s" loading="lazy" alt="Thumbs up.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.1s">
+                  Automate it&nbsp;all.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.2s">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor ipsum.
+                </p>
+              </div>
+            </li>
+            <li class="info__item">
+              <!-- card #4 -->
+              <div class="info__card simple-card">
+                <img class="simple-card__icon img-style wow fadeInDown" src="img/info_icon_4.svg" data-wow-duration="0.8s" data-wow-delay="1.2s" loading="lazy" alt="Exclamation points.">
+                <h3 class="simple-card__title wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.3s">
+                  Stay informed.
+                </h3>
+                <p class="simple-card__descr wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="1.4s">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod incididunt ut&nbsp;labore
+                  et&nbsp;consectetur.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="posts">
+        <div class="posts__container container">
+          <div class="posts__top-wrap">
+            <!-- section title -->
+            <h2 class="posts__title section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              Get smarter, with our blog.
+            </h2>
+            <!-- section button -->
+            <a class="posts__btn btn-primary link-reset wow fadeInUp" href="#" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              See All Posts
+            </a>
+          </div>
+          <!-- list of the posts -->
+          <ul class="posts__list list-reset">
+            <li class="posts__item wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              <!-- card #1 -->
+              <article class="posts__card card">
+                <img class="card__img img-style" src="img/posts_1.jpg" loading="lazy" alt="Example of how to manage your tasks by your phone.">
+                <div class="card__content">
+                  <div class="card__wrap">
+                    <span class="card__label">
+                      Improvements
+                    </span>
+                    <h3 class="card__title">
+                      <a class="card__link link-reset" href="#">
+                        Automating Daily Tasks from Your Phone
+                      </a>
+                    </h3>
+                    <p class="card__descr">
+                      Dicta nihil ratione corrupti. Aut dolorem dolores omnis laboriosam ratione sequi. Provident
+                      ad&nbsp;sed velit. Est ea&nbsp;ab.
+                    </p>
+                  </div>
+                  <time class="card__time" datetime="2022-08-24">
+                    April&nbsp;24, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.7s">
+              <!-- card #2 -->
+              <article class="posts__card card">
+                <img class="card__img img-style" src="img/posts_2.jpg" loading="lazy" alt="Example of how to manage your tasks by your laptop.">
+                <div class="card__content">
+                  <div class="card__wrap">
+                    <span class="card__label">
+                      Tips &amp;&nbsp;Tricks
+                    </span>
+                    <h3 class="card__title">
+                      <a class="card__link link-reset" href="#">
+                        Can You Automate Group Learning?
+                      </a>
+                    </h3>
+                    <p class="card__descr">
+                      Dicta nihil ratione corrupti. Aut dolorem dolores omnis laboriosam ratione sequi. Provident
+                      ad&nbsp;sed velit. Est ea&nbsp;ab.
+                    </p>
+                  </div>
+                  <time class="card__time" datetime="2022-08-24">
+                    April&nbsp;24, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.8s">
+              <!-- card #3 -->
+              <article class="posts__card card">
+                <img class="card__img img-style" src="img/posts_3.jpg" loading="lazy" alt="Successful completion of the deal.">
+                <div class="card__content">
+                  <div class="card__wrap">
+                    <span class="card__label">
+                      News
+                    </span>
+                    <h3 class="card__title">
+                      <a class="card__link link-reset" href="#">
+                        Our $3,000,000&nbsp;B Round Investors
+                      </a>
+                    </h3>
+                    <p class="card__descr">
+                      Eos ipsum et&nbsp;est quis neque cum. Quis autem est eligendi amet animi eaque. Itaque minus illo
+                      delectus vel vitae dolores minus.
+                    </p>
+                  </div>
+                  <time class="card__time" datetime="2022-08-24">
+                    April&nbsp;24, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="offer">
+        <div class="offer__container container">
+          <div class="offer__wrap wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            <!-- section title -->
+            <h2 class="offer__title section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              Get started with Whirl
+            </h2>
+            <!-- offer description -->
+            <p class="offer__descr section-descr wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt.
+            </p>
+            <!-- to order button -->
+            <a class="offer__btn btn-book link-reset wow fadeInUp" href="#" data-wow-duration="0.8s" data-wow-delay="0.8s">
+              <span class="btn-book__txt">Book a demo</span>
+            </a>
+            <!-- offer remarks -->
+            <div class="offer__remark-wrap">
+              <span class="offer__remark wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                Free 30-day trial
+              </span>
+              <span class="offer__remark wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="1s">
+                No&nbsp;credit-card required
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!-- main part of footer -->
+      <div class="footer__container container">
+        <div class="footer__wrap-main">
+          <!-- logo and credits -->
+          <div class="footer__logo-wrap">
+            <!-- logo -->
+            <a class="footer__logo logo" href="#" aria-label="Go to top of page." target="_blank" rel="noopener noreferrer">
+              <img class="logo__img img-style" src="img/logo.svg" loading="lazy" alt="Whirl logo.">
+            </a>
+            <!-- credits -->
+            <ul class="footer__credits-list credits-list list-reset">
+              <li class="credits-list__item">
+                <span class="credits-list__txt f-credits">
+                  Built&nbsp;by
+                  <a class="credits-list__link f-credits__link link-reset" href="#" target="_blank" rel="noopener noreferrer">
+                    Nikolai Bain
+                  </a>.
+                </span>
+              </li>
+              <li class="credits-list__item">
+                <span class="credits-list__txt f-credits">
+                  Powered&nbsp;by
+                  <a class="credits-list__link f-credits__link link-reset" href="#" target="_blank" rel="noopener noreferrer">
+                    Webflow
+                  </a>.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <!-- menu and subscribe -->
+          <div class="footer__menu-sub-wrap">
+            <!-- column #1 -->
+            <div class="footer__menu f-menu">
+              <h3 class="f-menu__title" id="info">
+                Info
+              </h3>
+              <nav class="f-menu__nav">
+                <ul class="f-menu__list list-reset" aria-labelledby="info">
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Features
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Blog
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Support
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Terms &amp;&nbsp;Conditions
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Privacy Policy
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- column #2 -->
+            <div class="footer__menu f-menu">
+              <h3 class="f-menu__title" id="admin">
+                Admin
+              </h3>
+              <nav class="f-menu__nav">
+                <ul class="f-menu__list list-reset" aria-labelledby="admin">
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Style Guide
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Licenses
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Instructions
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      Changelog
+                    </a>
+                  </li>
+                  <li class="f-menu__item">
+                    <a class="f-menu__link link-reset" href="#">
+                      404
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- column #3 -->
+            <div class="footer__sub f-sub">
+              <h3 class="f-sub__title">
+                Newsletter
+              </h3>
+              <p class="f-sub__descr">
+                Sign up for the latest news, company insights, and Whirl updates.
+              </p>
+              <!-- subscribe form -->
+              <form class="f-sub__form sub-form" action="#">
+                <label class="sub-form__label">
+                  <input class="sub-form__input input-reset" type="email" name="email" placeholder="Your email"
+                    oninvalid="this.setCustomValidity('Fill this field')" oninput="this.setCustomValidity('')" required>
+                </label>
+                <button class="sub-form__btn btn-reset" type="submit">
+                  <svg class="sub-form__btn-icon" viewBox="0 0 18 10">
+                    <use xlink:href="#arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottom part of footer -->
+      <div class="footer__container container">
+        <div class="footer__wrap-bottom">
+          <!-- copy and credits -->
+          <div class="footer__copy-wrap">
+            <!-- copyright -->
+            <small class="footer__copy">
+              &copy;&nbsp;2022&nbsp;Whirl. All Rights Reserved.
+            </small>
+            <span class="footer__credits f-credits">
+              Illustrations&nbsp;by
+              <a class="f-credits__link link-reset" href="#" target="_blank" rel="noopener noreferrer">
+                Streamline
+              </a>.
+            </span>
+          </div>
+          <!-- social link -->
+          <div class="footer__social-wrap">
+            <ul class="footer__social-list social list-reset">
+              <li class="social__item">
+                <!-- twitter link -->
+                <a class="social__link link-reset" href="https://twitter.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                  <svg class="social__link-icon" viewBox="0 0 22 22">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <!-- linkedIn link -->
+                <a class="social__link link-reset" href="https://www.linkedin.com/" aria-label="Linked In" target="_blank" rel="noopener noreferrer">
+                  <svg class="social__link-icon" viewBox="0 0 22 22">
+                    <use xlink:href="#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <!-- facebook link -->
+                <a class="social__link" href="https://www.facebook.com/?locale=ru_RU" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                  <svg class="social__link-icon" viewBox="0 0 22 22">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- js -->
+  <script src="libs/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

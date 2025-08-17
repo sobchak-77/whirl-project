@@ -1,0 +1,39 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.benefits {
+  padding-top: 117px;
+  padding-bottom: 120px;
+}
+
+.benefits__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.benefits__card {
+  padding: 36px 40px 38px 33px;
+  background-repeat: no-repeat;
+  background-position: 32px 31px;
+  background-size: auto;
+}
+
+.benefits__card--1 {
+  background-color: #faea73;
+}
+
+.benefits__card--2 {
+  background-color: #cceff6;
+}
+
+.benefits__card--3 {
+  background-color: #f7cedc;
+}
