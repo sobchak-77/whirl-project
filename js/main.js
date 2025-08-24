@@ -1,3 +1,9 @@
+// ------------------
+// --- ANIMATIONS ---
+// ------------------
+
+new WOW().init();
+
 // -------------------
 // --- BURGER MENU ---
 // -------------------
@@ -52,14 +58,8 @@ window.addEventListener('keydown', (ev) => {
 const activeClass = 'is-active';
 const accBtns = document.querySelectorAll('.accordion__btn');
 accBtns.forEach((btnEl) => {
-  btnEl.addEventListener('click', (ev) => {
+  btnEl.addEventListener('click', () => {
     btnEl.classList.toggle(activeClass);
-
-    for (const btnEl of accBtns) {
-      if (btnEl.matches(`.${activeClass}`) && btnEl !== ev.target) {
-        btnEl.classList.remove(activeClass);
-      }
-    }
   });
 });
 
@@ -90,9 +90,3 @@ input.addEventListener('mouseenter', () => {
 input.addEventListener('mouseleave', () => {
   inputIcon.classList.remove('is-active-icon');
 });
-
-// ------------------
-// --- ANIMATIONS ---
-// ------------------
-
-new WOW().init();
