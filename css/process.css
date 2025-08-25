@@ -159,6 +159,10 @@
 .accordion__content {
   max-height: 0;
   opacity: 0;
+  -webkit-transition: max-height 0.3s ease-in-out,
+    opacity 0.2s;
+  -o-transition: max-height 0.3s ease-in-out,
+    opacity 0.2s;
   transition: max-height 0.3s ease-in-out,
     opacity 0.2s;
 }
