@@ -55,6 +55,8 @@ html {
   /* --- fonts --- */
   --font-family: "Inter", sans-serif;
   --title-font-family: "Fraunces", sans-serif;
+  /* --- gap --- */
+  --gap: 30px;
 }
 
 .page {

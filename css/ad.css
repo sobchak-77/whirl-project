@@ -18,7 +18,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: var(--gap);
   container: advert-container / inline-size;
 }
 
@@ -39,7 +39,7 @@
   .advert__bg {
     min-height: 332px;
     background-size: 290px;
-    background-position: left 30px bottom;
+    background-position: left var(--gap) bottom;
   }
 }
 
@@ -83,7 +83,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 11px;
-  margin-bottom: 30px;
+  margin-bottom: var(--gap);
 }
 
 .advert__item-txt {

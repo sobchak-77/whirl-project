@@ -16,7 +16,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: var(--gap);
   container: hero-container / inline-size;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .hero__descr {
-  margin-bottom: 30px;
+  margin-bottom: var(--gap);
   max-width: 350px;
   color: var(--txt-color);
   font-size: 20px;

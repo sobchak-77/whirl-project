@@ -7,7 +7,7 @@
 
 .footer {
   padding-top: 48px;
-  padding-bottom: 30px;
+  padding-bottom: var(--gap);
 }
 
 .footer__container:not(:last-child) {
@@ -40,7 +40,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: var(--gap);
 }
 
 .footer__logo-wrap {
@@ -170,7 +170,7 @@
 }
 
 .f-sub__descr {
-  margin-bottom: 30px;
+  margin-bottom: var(--gap);
   color: var(--txt-color);
   line-height: 150%;
   letter-spacing: 0.01em;

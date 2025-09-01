@@ -13,17 +13,14 @@
 .benefits__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  -ms-grid-columns: 1fr var(--gap) 1fr var(--gap) 1fr;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: var(--gap);
   width: 100%;
 }
 
 .benefits__card {
   padding: 36px 40px 38px 33px;
-  background-repeat: no-repeat;
-  background-position: 32px 31px;
-  background-size: auto;
 }
 
 .benefits__card--1 {

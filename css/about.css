@@ -17,7 +17,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: var(--gap);
 }
 
 /* ---------------------- */
@@ -40,9 +40,9 @@
 .about__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  -ms-grid-columns: 1fr var(--gap) 1fr var(--gap) 1fr;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: var(--gap);
   width: 100%;
   max-width: 732px;
 }

@@ -217,7 +217,7 @@
   min-height: 483px;
   max-width: 518px;
   background-image: url("../img/process.png");
-  background-position: bottom right 32px;
+  background-position: bottom right var(--gap);
   background-size: contain;
   background-repeat: no-repeat;
 }
