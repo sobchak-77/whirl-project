@@ -60,11 +60,11 @@
   letter-spacing: 0.01em;
 }
 
-/* ----------------------- */
-/* --- PRIMARY BUTTON --- */
-/* --------------------- */
+/* -------------------- */
+/* --- MAIN BUTTON --- */
+/* ------------------ */
 
-.btn-primary {
+.btn-main {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 7px 19px;
@@ -87,17 +87,17 @@
     -webkit-box-shadow 0.3s ease-in-out;
 }
 
-.btn-primary:focus-visible {
+.btn-main:focus-visible {
   border-color: var(--main-color);
 }
 
 @media (any-hover: hover) {
-  .btn-primary:hover {
+  .btn-main:hover {
     border-color: var(--main-color);
   }
 }
 
-.btn-primary:active {
+.btn-main:active {
   -webkit-box-shadow: 0 0 0 2px rgba(0, 112, 160, 0.5);
           box-shadow: 0 0 0 2px rgba(0, 112, 160, 0.5);
 }
